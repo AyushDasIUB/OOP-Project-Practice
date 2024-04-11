@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #cbe7f1;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <Label layoutX="206.0" layoutY="76.0" text="All Appointments">
+         <font>
+            <Font name="Bell MT" size="26.0" />
+         </font>
+      </Label>
+      <TableView layoutX="28.0" layoutY="135.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn prefWidth="102.0" text="C1" />
+          <TableColumn prefWidth="134.0" text="C2" />
+            <TableColumn prefWidth="107.0" text="Column X" />
+            <TableColumn prefWidth="78.0" text="Column X" />
+            <TableColumn prefWidth="132.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Button layoutX="380.0" layoutY="355.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" style="-fx-background-radius: 20px; -fx-background-color: #cbe7f1; -fx-border-color: #152f54; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 10, 0.3), 10, 0, 10, 10);" text="Join Session" textFill="#152f54">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="164.0" layoutY="355.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" style="-fx-background-radius: 20px; -fx-background-color: #cbe7f1; -fx-border-color: #152f54; -fx-border-radius: 20px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 10, 0.3), 10, 0, 10, 10);" text="Messaging" textFill="#152f54">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+   </children>
+</AnchorPane>

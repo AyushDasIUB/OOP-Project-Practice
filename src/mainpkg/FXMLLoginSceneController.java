@@ -73,6 +73,15 @@ public class FXMLLoginSceneController implements Initializable {
                             window.setScene(scene);
                             window.show();
                     }
+                    if("Interpreter".equals(tokens[2])){
+                            Parent mainSceneParent = FXMLLoader.load(getClass().getResource("FXMLInterpreterMainScene.fxml"));
+        
+                            Scene scene = new Scene(mainSceneParent);
+
+                            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                            window.setScene(scene);
+                            window.show();
+                    }
                 
                 
                 }

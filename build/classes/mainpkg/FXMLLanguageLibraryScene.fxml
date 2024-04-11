@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.FXMLLanguageLibrarySceneController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #cbe7f1;">
+         <children>
+            <Label layoutX="150.0" layoutY="31.0" text="Language Books Repository">
+               <font>
+                  <Font name="Bell MT" size="26.0" />
+               </font>
+            </Label>
+            <Line endX="447.0" layoutX="129.0" layoutY="77.0" startX="-100.0" />
+            <Button layoutX="48.0" layoutY="98.0" mnemonicParsing="false" onAction="#book1OpenOnAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: Empty;">
+               <graphic>
+                  <ImageView fitHeight="211.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/The%20Translation%20Studies%20Reader.jpeg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="30.0" layoutY="293.0" prefHeight="54.0" prefWidth="184.0" text="4th EditionThe Translation Studies ReaderEdited By Lawrence Venuti, Lawrence Venuti" wrapText="true" />
+            <Button layoutX="380.0" layoutY="98.0" mnemonicParsing="false" onAction="#book2OpenOnAction" prefHeight="195.0" prefWidth="114.0" style="-fx-background-color: empty;">
+               <graphic>
+                  <ImageView fitHeight="186.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Found%20in%20Translation%20How%20Language%20Shapes%20Our%20Lives%20and%20Transforms%20the%20World%20by%20Nataly%20Kelly%20and%20Jost%20Zetzsche.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="335.0" layoutY="293.0" prefHeight="54.0" prefWidth="242.0" text="Found in Translation: How Language Shapes Our Lives and Transforms the WorldBook by Jost Zetzsche and Nataly Kelly" wrapText="true" />
+            <Button layoutX="51.0" layoutY="355.0" mnemonicParsing="false" onAction="#Book3OpenOnAction" prefHeight="195.0" prefWidth="113.0" style="-fx-background-color: empty;">
+               <graphic>
+                  <ImageView fitHeight="226.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Translation%20Changes%20Everything%20Theory%20and%20Practice%20edited%20by%20Lawrence%20Venuti.jpeg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="18.0" layoutY="553.0" prefHeight="44.0" prefWidth="208.0" text="Translation Changes EverythingTheory and PracticeBy Lawrence Venuti · 2012" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

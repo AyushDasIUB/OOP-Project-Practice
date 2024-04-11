@@ -65,7 +65,25 @@ public class FXMLSingupSceneController implements Initializable {
     @FXML
     private void registerButtonOnAction(ActionEvent event) throws IOException {
         
-        if((passwordTextField.getText().equals(confirmPasswordTextField.getText()))||(confirmPasswordTextField.getText().equals(passwordTextField.getText()))){
+        if(
+           nameTextField.getText().isEmpty() || 
+           idTextField.getText().isEmpty() || 
+           passwordTextField.getText().isEmpty() ||
+           confirmPasswordTextField.getText().isEmpty() ||
+           userCategoryComboBox.getValue() == null){
+            
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setContentText("Some fields are empty. Please fill in all fields.");
+            alert.showAndWait();
+            return; 
+            
+            
+            
+            
+        }else{
+        
+        if((passwordTextField.getText().equals(confirmPasswordTextField.getText())) ||
+           (confirmPasswordTextField.getText().equals(passwordTextField.getText()))){
         
 
 
@@ -128,6 +146,6 @@ public class FXMLSingupSceneController implements Initializable {
             return;
         }
 
-            }
+        }}
     
 }

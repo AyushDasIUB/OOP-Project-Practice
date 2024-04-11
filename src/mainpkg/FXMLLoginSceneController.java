@@ -19,6 +19,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -46,48 +48,28 @@ public class FXMLLoginSceneController implements Initializable {
 
     @FXML
     private void loginButtonOnAction(ActionEvent event) throws IOException {
-                //use BufferedReader OR Scanner
+        
         File file = new File("registerText.txt");
         Scanner sc; String str=null;
         try {
             sc = new Scanner(file);
-            //outputTxtArea.setText(null);
+            boolean dataFound = false;
             while(sc.hasNextLine()){
                 str=sc.nextLine();
                 String[] tokens;
                 tokens = str.split(",");
-                //str = "Id="+tokens[0]+", Name="+tokens[1]
-                //        +", Cgpa="+tokens[2];
-                //outputTxtArea.appendText(str+"\n");
-                //outputTxtArea.appendText("\n");
-                
+
                 if((idTextField.getText().equals(tokens[0]))&&(passwordTextField.getText().equals(tokens[1]))){
                     System.out.println("Hello "+tokens[2]+" "+tokens[3]);
-                    
+                    dataFound = true;
                     if("Nurse".equals(tokens[2])){
-//                            Parent mainSceneParent = FXMLLoader.load(getClass().getResource("FXMLMainScene.fxml"));
-//        
-//                            Scene scene = new Scene(mainSceneParent);
-//
-//                            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-//                            window.setScene(scene);
-//                            window.show();
-                            
-                            
-                            
+
                                     FXMLLoader loader = new FXMLLoader();
                                     loader.setLocation(getClass().getResource("FXMLMainScene.fxml"));
                                     Parent personViewParent = loader.load();
-
-                                    //Parent personViewParent = FXMLLoader.load(getClass().getResource("FXMLScene2.fxml"));
                                     Scene personViewScene = new Scene(personViewParent);
-
-                                    //access the controller
                                     FXMLMainSceneController controller = loader.getController();
-                                    //PersonViewSceneController controller = new PersonViewSceneController();
-                                    //Person rahim = new Person();
-                                    //controller.initData(rahim);
-//                                    controller.initData(tableView.getSelectionModel().getSelectedItem());
+
                                       
 
 
@@ -97,7 +79,7 @@ public class FXMLLoginSceneController implements Initializable {
 
                                     window.setScene(personViewScene);
                                     window.show();
-                            
+                                                
                             
                             
                             
@@ -112,16 +94,22 @@ public class FXMLLoginSceneController implements Initializable {
 
                             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                             window.setScene(scene);
-                            window.show();
+                            window.show();                         
                     }
+                    
+                
+                }               
+
                 
                 
-                }
                 
                 
-                
-                
-                
+            }
+            if(!dataFound){
+                Alert a = new Alert(AlertType.INFORMATION);
+                a.setContentText("Oops! User not found; need to SignUp.");
+                a.showAndWait();
+                return;
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FXMLLoginSceneController.class.getName()).log(Level.SEVERE, null, ex);

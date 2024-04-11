@@ -81,6 +81,10 @@ public class FXMLMainSceneController implements Initializable {
         mainBorderPane.setCenter(root);      
     }
 
+    void initData(String token) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
  
     
 }

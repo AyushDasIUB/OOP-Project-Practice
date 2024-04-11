@@ -65,13 +65,45 @@ public class FXMLLoginSceneController implements Initializable {
                     System.out.println("Hello "+tokens[2]+" "+tokens[3]);
                     
                     if("Nurse".equals(tokens[2])){
-                            Parent mainSceneParent = FXMLLoader.load(getClass().getResource("FXMLMainScene.fxml"));
-        
-                            Scene scene = new Scene(mainSceneParent);
+//                            Parent mainSceneParent = FXMLLoader.load(getClass().getResource("FXMLMainScene.fxml"));
+//        
+//                            Scene scene = new Scene(mainSceneParent);
+//
+//                            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//                            window.setScene(scene);
+//                            window.show();
+                            
+                            
+                            
+                                    FXMLLoader loader = new FXMLLoader();
+                                    loader.setLocation(getClass().getResource("FXMLMainScene.fxml"));
+                                    Parent personViewParent = loader.load();
 
-                            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                            window.setScene(scene);
-                            window.show();
+                                    //Parent personViewParent = FXMLLoader.load(getClass().getResource("FXMLScene2.fxml"));
+                                    Scene personViewScene = new Scene(personViewParent);
+
+                                    //access the controller
+                                    FXMLMainSceneController controller = loader.getController();
+                                    //PersonViewSceneController controller = new PersonViewSceneController();
+                                    //Person rahim = new Person();
+                                    //controller.initData(rahim);
+//                                    controller.initData(tableView.getSelectionModel().getSelectedItem());
+                                      
+
+
+                                    controller.initData(tokens[3]);
+
+                                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+                                    window.setScene(personViewScene);
+                                    window.show();
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                     }
                     if("Interpreter".equals(tokens[2])){
                             Parent mainSceneParent = FXMLLoader.load(getClass().getResource("FXMLInterpreterMainScene.fxml"));

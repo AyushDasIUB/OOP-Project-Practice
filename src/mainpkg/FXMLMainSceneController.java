@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -29,6 +30,8 @@ public class FXMLMainSceneController implements Initializable {
     private BorderPane mainBorderPane;
     @FXML
     private AnchorPane welcomeAnchorePane;
+    @FXML
+    private Label nurseNameInWelcomePage;
 
     /**
      * Initializes the controller class.
@@ -82,7 +85,7 @@ public class FXMLMainSceneController implements Initializable {
     }
 
     void initData(String token) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        nurseNameInWelcomePage.setText(token);
     }
 
  

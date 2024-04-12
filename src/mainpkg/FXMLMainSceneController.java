@@ -45,28 +45,28 @@ public class FXMLMainSceneController implements Initializable {
 
     @FXML
     private void profileButtonOnAction(ActionEvent event) {
-        loadPage("ProfileFXML");
+        loadPage("FXMLNurseProfileScene");
         
     }
 
     @FXML
     private void findPatientsOnAction(ActionEvent event) {
-        loadPage("FindPatientFXML");
+        loadPage("FXMLNurseFindPatientScene");
     }
 
     @FXML
     private void schedulesButtonOnAction(ActionEvent event) {
-        loadPage("SchedulesFXML");
+        loadPage("FXMLNurseSchedulesScene");
     }
 
     @FXML
     private void assignedPatientButtonOnAction(ActionEvent event) {
-        loadPage("AssignedPatientsFXML");
+        loadPage("FXMLNurseAssignedPatientsScene");
     }
 
     @FXML
     private void trainingButtonOnAction(ActionEvent event) {
-        loadPage("Training & CertificationsFXML");
+        loadPage("FXMLNurseTraining&CertificationsScene");
     }
 
     @FXML

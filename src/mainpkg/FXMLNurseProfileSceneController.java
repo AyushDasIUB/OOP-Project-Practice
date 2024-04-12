@@ -29,7 +29,7 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author dasay
  */
-public class ProfileFXMLController implements Initializable {
+public class FXMLNurseProfileSceneController implements Initializable {
 
     @FXML
     private AnchorPane profileAnchorePane;

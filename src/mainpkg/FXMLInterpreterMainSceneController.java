@@ -40,22 +40,22 @@ public class FXMLInterpreterMainSceneController implements Initializable {
 
     @FXML
     private void profileButtonOnAction(ActionEvent event) {
-        loadPage("FXMLProfileScene");
+        loadPage("FXMLInterpreterProfileScene");
     }
 
     @FXML
     private void setAvailabilityOnAction(ActionEvent event) {
-        loadPage("FXMLSetAvailabilityScene");
+        loadPage("FXMLInterpreterSetAvailabilityScene");
     }
 
     @FXML
     private void viewAppointmentOnAction(ActionEvent event) {
-        loadPage("FXMLAppointmentsScene");
+        loadPage("FXMLInterpreterAppointmentsScene");
     }
 
     @FXML
     private void translateDocumentsOnAction(ActionEvent event) {
-        loadPage("FXMLTranslatDocumentsScene-1");
+        loadPage("FXMLInterpreterTranslatDocumentsScene-1");
     }
 
     @FXML

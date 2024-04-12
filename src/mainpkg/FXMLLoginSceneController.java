@@ -127,5 +127,5 @@ public class FXMLLoginSceneController implements Initializable {
         window.setScene(scene);
         window.show();
     }
-    
-}
+
+        }
